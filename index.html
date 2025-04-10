@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BingXiXi - your online shopping paradise</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="container">
+            <div>Welcome to BingXiXi</div>
+            <div class="user-links">
+                <a href="./users/login.html"><i class="fas fa-user"></i> Login</a>
+                <a href="./users/signup.html"><i class="fas fa-user-plus"></i> SignUp</a>
+                <a onclick="logout()"><i class="fas fa-user-plus"></i>logout</a>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            
+            <div class="header-content">
+                <a href="/" class="logo">index</a>
+                <div class="search-box">
+                     <input type="text" class="search-input" placeholder="search product...">
+                    <button class="search-button"><i class="fas fa-search"></i> search</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li class="nav-item active"><a href="./index.html"><i class="fas fa-home"></i> index</a></li>
+                <li class="nav-item"><a href="./sports_and_digital.mall/sports.html"><i class="fas fa-running"></i> Sports Zone</a></li>
+                <li class="nav-item"><a href="./sports_and_digital.mall/digital.html"><i class="fas fa-mobile-alt"></i> Digital Mall</a></li>
+                <li class="nav-item active"><a href="./virtual mall/Virtual item trading.html"><i class="fas fa-globe-asia"></i>Virtual item trading</a></li>
+                <li class="nav-item"><a href="./virtual mall/Game companionship and power leveling.html"><i class="fas fa-map-marker-alt"></i>Game companionship and power leveling</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main">
+        <div class="container">
+            <div class="main-layout">
+                <aside class="sidebar">
+                    <div class="category-menu">
+                        <h3><i class="fas fa-list"></i> Product Categories</h3>
+                        <ul class="category-list">
+                            <li>
+                                <a href="sports_and_digital.mall/sports.html"><i class="fas fa-running"></i> Sports Zone</a>
+                                <ul>
+                                    <li><a href="#"><i class="fas fa-basketball"></i> basketball shoes</a></li>
+                                    <li><a href="#"><i class="fas fa-running"></i> running shoes</a></li>
+                                    
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="sports_and_digital.mall/digital.html"><i class="fas fa-mobile-alt"></i> Digital Technology</a>
+                                <ul>
+                                    <li><a href="#"><i class="fas fa-phone"></i> Smartphone</a></li>
+                                    <li><a href="#"><i class="fas fa-headphones"></i> Smart headphones</a></li>
+                                    <li><a href="#"><i class="fas fa-clock"></i> Smartwatch</a></li>
+                                </ul>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </aside>
+
+    
+                <div class="content">
+                    <div class="banner">
+                        <div class="slider">
+                            <div class="slide active">
+                                <img src="./images/ultra.jpg" alt="数码特惠">
+                            </div>
+                            <div class="slide">
+                                <img src="./images/iphone-16-pro-max.jpg" alt="新品上市">
+                            </div>
+                            <div class="slide">
+                                <img src="./images/kd17.jpg" alt="限时特卖">
+                            </div>
+                        </div>
+                        <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
+                        <div class="slider-nav">
+                            <button class="active" data-slide="0"></button>
+                            <button data-slide="1"></button>
+                            <button data-slide="2"></button>
+                        </div>
+                    </div>
+                
+                    <section class="featured-section">
+                        <h2><i class="fas fa-fire"></i> Hot Recommendations</h2>
+                        <div class="product-grid">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="./images/air-jordan-39.jpg" alt="Air Jordan XXXIX">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Air Jordan XXXIX</h3>
+                                    <div class="product-price" price="1499.00">HK$1499</div>
+                                    <div class="product-meta">
+                                        <span class="sales"><i class="fas fa-shopping-cart"></i> Monthly Sales 2500+</span>
+                                        <span class="rating"><i class="fas fa-star"></i> 4.9</span>
+                                        <button onclick="cart.addToCart(9)">add to the cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="./images/g-t-cut-3.jpg" alt="Nike G.T. Cut 3">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Nike G.T. Cut 3</h3>
+                                    <div class="product-price" price="1349.00">HK$1349</div>
+                                    <div class="product-meta">
+                                        <span class="sales" sale_number="3800"><i class="fas fa-shopping-cart"></i> Monthly Sales 3800+</span>
+                                        <span class="rating" rate="4.8"><i class="fas fa-star"></i> 4.8</span>
+                                        <button onclick="cart.addToCart(10)">add to the cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <img src="./images/iphone-16e.jpg" alt="iphone 16e">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">iphone 16e</h3>
+                                    <div class="product-price" price="4499.00">HK$4499</div>
+                                    <div class="product-meta">
+                                        <span class="sales" sale_number="1600"><i class="fas fa-shopping-cart"></i> Monthly Sale 1600+</span>
+                                        <span class="rating" rate="4.7"><i class="fas fa-star"></i> 4.7</span>
+                                        <button onclick="cart.addToCart(3)">add to the cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <a href="./virtual mall/product_detail/product_detail_Hel.html">
+                                        <img src="./virtual mall/images/Hel.jpg">
+                                    </a>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Hel</h3>
+                                    <div class="product-price" price="7000.00">HK$7000</div>
+                                    <div class="product-meta">
+                                        <span class="sales"sale_number="40"><i class="fas fa-shopping-cart"></i>Monthly Sales 40+</span>
+                                        <span class="rating"rate="4.8"><i class="fas fa-star"></i> 4.8</span>
+                                        <button onclick="cart.addToCart(16)">add to the cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="featured-section">
+                        <h2><i class="fas fa-crown"></i>New product launch</h2>
+                        <div class="product-grid">
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <a href="./sports_and_digital.mall/product_detail/produnct_detail_16pmx.html">
+                                    <img src="./images/iphone-16-pro-max.jpg" alt="iphone-16-pro-max">
+                                    </a>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">iphone 16 pro max</h3>
+                                    <div class="product-price">HK$9999</div>
+                                    <div class="product-meta">
+                                        <span class="sales"><i class="fas fa-certificate"></i> 新品</span>
+                                        <span class="rating"><i class="fas fa-star"></i> 4.9分</span>
+                                        <button onclick="cart.addToCart(2)">add to the cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <div class="product-image">
+                                    <a href="./sports_and_digital.mall/product_detail/air-jordan-39.html">
+                                    <img src="./images/air-jordan-39.jpg" alt="Air Jordan XXXIX">
+                                    </a>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Air Jordan XXXIX</h3>
+                                    <div class="product-price">HK$1499</div>
+                                    <div class="product-meta">
+                                        <span class="sales"><i class="fas fa-certificate"></i> 新品</span>
+                                        <span class="rating"><i class="fas fa-star"></i> 4.8分</span>
+                                        <button onclick="cart.addToCart(9)">add to the cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                                <div class="product-card">
+                                    <div class="product-image">
+                                        <a href="./virtual mall/product_detail/Bongo Cat.html">
+                                        <img src="./virtual mall/images/Bongo Cat.jpg" alt="Bongo Cat">
+                                        </a>
+                                    </div>
+                                    <div class="product-info">
+                                        <h3 class="product-title">Bongo Cat</h3>
+                                        <div class="product-price" price="50.00">HK$50.00/h</div>
+                                        <div class="product-meta">
+                                            <span class="sales" sale_number="1800"><i class="fas fa-shopping-cart"></i>Monthly Sales 100+</span>
+                                            <span class="rating" rate="8.0"><i class="fas fa-star"></i> 8.0</span>
+                                            <button onclick="cart.addToCart(21)">add to the cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                    <div class="product-card">
+                                        <div class="product-image">                         
+                                            <a href="./virtual mall/product_detail/product_detail_Wynern.html">
+                                            <img src="./virtual mall/images/Wynern.jpg" alt="Wynern">
+                                            </a>
+                                        </div>
+                                        <div class="product-info">
+                                            <h3 class="product-title">Wynern</h3>
+                                            <div class="product-price" price="8000.00">HK$8000</div>
+                                            <div class="product-meta">
+                                                <span class="sales" sale_number="70"><i class="fas fa-shopping-cart"></i>Monthly Sales 70+</span>
+                                                <span class="rating" rate="4.9"><i class="fas fa-star"></i> 4.9</span>
+                                                <button onclick="cart.addToCart(15)">add to the cart</button>
+                                            </div>
+                                        </div>
+                                    </div>
+   
+                        </div>
+                    </section>
+                    <section id="cart">
+                        <h2>shopping cart</h2>
+                        <ul id="cart-items"></ul>
+                        <p>total price: HK$<span id="total-price">0</span></p>
+                        <button onclick="cart.checkout()">checkout</button>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    
+    <script src="js/slider.js"></script>
+</body>
+</html>
+<script>
+    var currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    var user = JSON.parse(localStorage.getItem("users")) || [];
+        window.onload = function() {
+            renderTopProducts();
+        };
+        window.onload = function() {
+    
+        var currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    
+        if (!currentUser) {
+    
+            alert("您尚未登录")
+        } else {
+    
+            var currentSessionUserID = sessionStorage.getItem("currentUserID");
+            if (currentSessionUserID !== currentUser.id || !sessionStorage.getItem("loginPromptShown")) {
+                alert("The login user：" + currentUser.id);
+                sessionStorage.setItem("currentUserID", currentUser.id); 
+                sessionStorage.setItem("loginPromptShown", "true");
+            }
+        }
+    };
+    function logout() {
+    
+        localStorage.removeItem("currentUser");
+        sessionStorage.removeItem("currentUserID");
+        sessionStorage.removeItem("loginPromptShown");
+        alert("You have loginout!");
+        window.location.href = "index.html";
+    }
+    </script>

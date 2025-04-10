@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BingXiXi - Sports Zone</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="./js/search.js"></script>
+</head>
+<body>
+    <script src="./js/slider.js"></script>
+    <div class="top-bar">
+        <div class="container">
+            <div>Welcome to the Sports Zone</div>
+            <div class="user-links">
+                <a href="../users/login.html"><i class="fas fa-user"></i> Log in</a>
+                <a href="../users/signup.html"><i class="fas fa-user-plus"></i>sign up</a>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">Sports Zone</a>
+                <div class="search-box">
+                    <input type="text" class="search-input" placeholder="search product...">
+                    <button class="search-button"><i class="fas fa-search"></i> search</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="../index.html"><i class="fas fa-home"></i> index</a></li>
+                <li class="nav-item active"><a href="./sports.html"><i class="fas fa-running"></i> Sports Zone</a></li>
+                <li class="nav-item"><a href="./digital.html"><i class="fas fa-mobile-alt"></i> Digital Mall</a></li>
+                <li class="nav-item active"><a href="../virtual mall/Virtual item trading.html item trading.html"><i class="fas fa-globe-asia"></i>Virtual item trading</a></li>
+                <li class="nav-item"><a href="../virtual mall/Game companionship and power leveling.html"><i class="fas fa-map-marker-alt"></i>Game companionship and power leveling</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main">
+        <div class="container">
+            <div class="main-layout">
+                <aside class="sidebar">
+                    <div class="category-menu">
+                        <h3><i class="fas fa-list"></i> Product Categories</h3>
+                        <ul class="category-list">
+                            <li>
+                                <a href="#" class="active"><i class="fas fa-basketball"></i> Basketball Shoes</a>
+                                <ul>
+                                    <li><a href="#">Air Jordan XXXIX</a></li>
+                                    <li><a href="#">Nike G.T. Cut 3</a></li>
+                                    <li><a href="#">KD17 EP</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fas fa-running"></i> running shoes</a>
+                                <ul>
+                                    <li><a href="#">Nike Vaporfly 3</a></li>
+                                    <li><a href="#">Nike Alphafly 3</a></li>
+                                    <li><a href="#">Nike Pegasus Plus</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+
+                <div class="content">
+                    <div class="page-header">
+                        <div id="section2"><h1><i class="fas fa-mug-hot"></i>Sport Shoes</h1></div>
+                        <div class="sort-options">
+                            <button onclick="sortProductCards_sum('grid')"><i class="fas fa-sort">comprehensive </i></button>
+                            <button onclick="sortProductCards_sales_number('grid')"><i class="fas fa-fire">Sales volume</i></button>
+                            <button onclick="sortProductCards_price('grid')"><i class="fas fa-yen-sign">price</i></button>
+                            <button onclick="sortProductCards_rates('grid')"><i class="fas fa-star">score</i></button>
+                        </div>
+                    </div>
+
+                    <section class="product-section">
+                        <div class="product-grid" id="grid">
+                            <div class="product-card" id="9">
+                                <div class="product-image">
+                                    <img src="./images/air-jordan-39.jpg" alt="Air Jordan XXXIX">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Air Jordan XXXIX</h3>
+                                    <div class="product-price" price="1499.00">HK$1499</div>
+                                    <div class="product-meta">
+                                        <span class="sales"><i class="fas fa-shopping-cart"></i> Monthly Sales 2500+</span>
+                                        <span class="rating"><i class="fas fa-star"></i> 4.9</span>
+                                        <button onclick="cart.addToCart(9)">add to the cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card" id="10">
+                                <div class="product-image">
+                                    <img src="./images/g-t-cut-3.jpg" alt="Nike G.T. Cut 3">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Nike G.T. Cut 3</h3>
+                                    <div class="product-price" price="1349.00">HK$1349</div>
+                                    <div class="product-meta">
+                                        <span class="sales" sale_number="3800"><i class="fas fa-shopping-cart"></i> Monthly Sales 3800+</span>
+                                        <span class="rating" rate="4.8"><i class="fas fa-star"></i> 4.8</span>
+                                        <button onclick="cart.addToCart(10)">add to the cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card" id="11">
+                                <div class="product-image">
+                                    <img src="./images/kd17.jpg" alt="KD17">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">KD17</h3>
+                                    <div class="product-price"price="1039.00">HK$1039</div>
+                                    <div class="product-meta">
+                                        <span class="sales" sale_number="1200"><i class="fas fa-shopping-cart"></i> Monthly Sales 1200+</span>
+                                        <span class="rating" rate="4.9"><i class="fas fa-star"></i> 4.9</span>
+                                        <button onclick="cart.addToCart(11)">add to the cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card" id="12">
+                                <div class="product-image">
+                                    <img src="./images/alphafly-3.jpg" alt="Nike Alphafly 3">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Nike Alphafly 3</h3>
+                                    <div class="product-price"price="2299.00">HK$2299</div>
+                                    <div class="product-meta">
+                                        <span class="sales" sale_number="4200"><i class="fas fa-shopping-cart"></i> Monthly Sales 4200+</span>
+                                        <span class="rating" rate="4.7"><i class="fas fa-star"></i> 4.7</span>
+                                        <button onclick="cart.addToCart(12)">add to the cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card" id="13">
+                                <div class="product-image">
+                                    <img src="./images/vaporfly-3.jpg" alt="Nike Vaporfly 3">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Nike Vaporfly 3</h3>
+                                    <div class="product-price"price="1699.00">HK$1699</div>
+                                    <div class="product-meta">
+                                        <span class="sales"sale_number="3100"><i class="fas fa-shopping-cart"></i> Monthly Sales 3100+</span>
+                                        <span class="rating"rate="4.8"><i class="fas fa-star"></i> 4.8</span>
+                                        <button onclick="cart.addToCart(13)">add to the cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card" id="14">
+                                <div class="product-image">
+                                    <img src="./images/pegasus-plus.jpg" alt="Nike Pegasus Plus">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Nike Pegasus Plus</h3>
+                                    <div class="product-price"price="1019.00">HK$1019</div>
+                                    <div class="product-meta">
+                                        <span class="sales" sale_number="5000"><i class="fas fa-shopping-cart"></i> Monthly Sales 5000+</span>
+                                        <span class="rating" rate="4.8"><i class="fas fa-star"></i> 4.8</span>
+                                        <button onclick="cart.addToCart(14)">add to the cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="cart">
+                        <h2>shopping cart</h2>
+                        <ul id="cart-items"></ul>
+                        <p>total price: HK$<span id="total-price">0</span></p>
+                        <button onclick="cart.checkout()">checkout</button>
+                    </section>
+
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+
+    
+</body>
+</html>
+<script>
+function sortProductCards_rates(gridID) {
+    const container = document.getElementById(gridID);
+    if (!container) {
+        console.error(`Can not find ${gridID} `);
+        return;
+    }
+
+    const cards = Array.from(container.querySelectorAll(".product-card"));
+
+    cards.sort((a, b) => {
+
+        const ratingA = parseFloat(a.querySelector(".rating").getAttribute("rate"));
+
+        const ratingB = parseFloat(b.querySelector(".rating").getAttribute("rate"));
+        return ratingB - ratingA;
+    });
+
+
+    container.innerHTML = "";
+
+
+    cards.forEach((cards) => {
+        container.appendChild(cards);
+    });
+}
+
+function sortProductCards_sales_number(GridID) {
+    const container = document.getElementById(GridID);
+    if (!container) {
+        console.error(`Can not find ${gridID} `);
+        return;
+    }
+
+
+    const cards = Array.from(container.querySelectorAll(".product-card"));
+
+
+    cards.sort((a, b) => {
+
+        const ratingA = parseInt(a.querySelector(".sales").getAttribute("sale_number"));
+
+        const ratingB = parseInt(b.querySelector(".sales").getAttribute("sale_number"));
+        return ratingB - ratingA;
+    });
+
+
+    container.innerHTML = "";
+
+
+    cards.forEach((cards) => {
+        container.appendChild(cards);
+    });
+}
+
+function sortProductCards_price(GridID) {
+    const container = document.getElementById(GridID);
+    if (!container) {
+        console.error(`Can not find ${gridID} `);
+        return;
+    }
+
+
+    const cards = Array.from(container.querySelectorAll(".product-card"));
+
+
+    cards.sort((a, b) => {
+
+        const ratingA = parseFloat(a.querySelector(".product-price").getAttribute("price"));
+
+        const ratingB = parseFloat(b.querySelector(".product-price").getAttribute("price"));
+        return ratingB - ratingA;
+    });
+
+
+    container.innerHTML = "";
+
+
+    cards.forEach((cards) => {
+        container.appendChild(cards);
+    });
+}
+
+function sortProductCards_sum(gridID) {
+    const container = document.getElementById(gridID);
+    if (!container) {
+        console.error(`Can not find ${gridID} `);
+        return;
+    }
+
+    const cards = Array.from(container.querySelectorAll(".product-card"));
+
+    cards.sort((a, b) => {
+
+        const ratingA = Number(parseFloat(a.querySelector(".rating").getAttribute("rate"))*parseInt(a.querySelector(".sales").getAttribute("sale_number"))/parseFloat(a.querySelector(".product-price").getAttribute("price")));
+
+        const ratingB = Number(parseFloat(b.querySelector(".rating").getAttribute("rate"))*parseInt(b.querySelector(".sales").getAttribute("sale_number"))/parseFloat(b.querySelector(".product-price").getAttribute("price")));
+        return ratingB - ratingA;
+    });
+
+
+    container.innerHTML = "";
+
+
+    cards.forEach((cards) => {
+        container.appendChild(cards);
+    });
+}
+</script>

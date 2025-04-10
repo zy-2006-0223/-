@@ -1,0 +1,330 @@
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BingXiXi - Digital mall</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="./js/search.js"></script>
+</head>
+<body>
+    <script src="./js/slider.js"></script>
+    <script src="./js/search.js"></script>
+    <div class="top-bar">
+        <div class="container">
+            <div>Welcome to the Digital Mall</div>
+            <div class="user-links">
+                <a href="../users/login.html"><i class="fas fa-user"></i> Log in</a>
+                <a href="../users/signup.html"><i class="fas fa-user-plus"></i> Sign up</a>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">Digital Mall</a>
+                <div class="search-box">
+                    <input type="text" class="search-input" placeholder="search product...">
+                    <button class="search-button"><i class="fas fa-search"></i> search</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="../index.html"><i class="fas fa-home"></i> index</a></li>
+                <li class="nav-item"><a href="./sports.html"><i class="fas fa-running"></i> Sports Zone</a></li>
+                <li class="nav-item active"><a href="./digital.html"><i class="fas fa-mobile-alt"></i> Digital Mall</a></li>
+                <li class="nav-item "><a href="../virtual mall/Virtual item trading.html"><i class="fas fa-globe-asia"></i>Virtual item trading</a></li>
+                <li class="nav-item"><a href="../virtual mall/Game companionship and power leveling.html"><i class="fas fa-map-marker-alt"></i>Game companionship and power leveling</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main">
+        <div class="container">
+            <div class="main-layout">
+                <aside class="sidebar">
+                    <div class="category-menu">
+                        <h3><i class="fas fa-list"></i>Digital Classification</h3>
+                        <ul class="category-list">
+                            <li>
+                                <a href="#" class="active"><i class="fas fa-phone"></i>phone</a>
+                                <ul>
+                                    <li><a href="#">iphone 16</a></li>
+                                    <li><a href="#">iphone 16 pro max</a></li>
+                                    <li><a href="#">iphone iphone 16e</a></li>
+                                    <li><a href="#">iphone 15</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="active"><i class="fas fa-headphones"></i>headphones</a>
+                                <ul>
+                                    <li><a href="#">Airpods Max</a></li>
+                                    <li><a href="#">Airpods pro 2</a></li>
+                                    <li><a href="#">Airpods 4</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="active"><i class="fas fa-clock"></i>watch</a>
+                                <ul>
+                                    <li><a href="#">Apple Watch Series 10</a></li>
+                                    <li><a href="#">Apple Watch Ultra 2</a></li>
+                                </ul>
+                            </li>       
+                    </div>
+                </aside>
+
+                <div class="content">
+                    <div class="page-header">
+                        <div id="section2"><h1><i class="fas fa-mug-hot"></i>Digital Technology</h1></div>
+                        <div class="sort-options">
+                            <button onclick="sortProductCards_sum('grid')"><i class="fas fa-sort">comprehensive </i></button>
+                            <button onclick="sortProductCards_sales_number('grid')"><i class="fas fa-fire">Sales volume</i></button>
+                            <button onclick="sortProductCards_price('grid')"><i class="fas fa-yen-sign">price</i></button>
+                            <button onclick="sortProductCards_rates('grid')"><i class="fas fa-star">score</i></button>
+                        </div>
+                    </div>
+
+                    <section class="product">
+                        <div class="product-grid" id="grid">
+                            <div class="product-card" id="1">
+                                <div class="product-image">
+                                    <a href="./product_detail/produnct_detail_16pmx.html">
+                                    <img src="./images/iphone-16.jpg" alt="iphone 16">
+                                    </a>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">iphone 16</h3>
+                                    <div class="product-price" price="6899.00">HK$6899</div>
+                                    <div class="product-meta">
+                                        <span class="sales" sale_number="1800"><i class="fas fa-shopping-cart"></i> Monthly Sales 1800+</span>
+                                        <span class="rating" rate="4.9"><i class="fas fa-star"></i> 4.9</span>
+                                        <button onclick="cart.addToCart(1)">add to the cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card" id="2">
+                                <div class="product-image">
+                                    <img src="./images/iphone-16-pro-max.jpg" alt="iphone 16 pro max">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">iphone 16 pro max</h3>
+                                    <div class="product-price"price="9999.00">HK$9999</div>
+                                    <div class="product-meta">
+                                        <span class="sales" sale_number="2200"><i class="fas fa-shopping-cart"></i> Monthly Sales 2200+</span>
+                                        <span class="rating" rate="4.8"><i class="fas fa-star"></i> 4.8</span>
+                                        <button onclick="cart.addToCart(2)">add to the cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card" id="3">
+                                <div class="product-image">
+                                    <img src="./images/iphone-16e.jpg" alt="iphone 16e">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">iphone 16e</h3>
+                                    <div class="product-price" price="4499.00">HK$4499</div>
+                                    <div class="product-meta">
+                                        <span class="sales" sale_number="1600"><i class="fas fa-shopping-cart"></i> Monthly Sale 1600+</span>
+                                        <span class="rating" rate="4.7"><i class="fas fa-star"></i> 4.7</span>
+                                        <button onclick="cart.addToCart(3)">add to the cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card" id="4">
+                                <div class="product-image">
+                                    <img src="./images/airpods-max.jpg" alt="Airpods Max">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Airpods Max</h3>
+                                    <div class="product-price" price="4599.00">HK$4599</div>
+                                    <div class="product-meta">
+                                        <span class="sales" sale_number="800"><i class="fas fa-shopping-cart"></i> Monthly Sales 800+</span>
+                                        <span class="rating" rate="4.9"><i class="fas fa-star"></i> 4.9</span>
+                                        <button onclick="cart.addToCart(4)">add to the cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card" id="5">
+                                <div class="product-image">
+                                    <img src="./images/s10.jpg" alt="Apple Watch Series 10">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Apple Watch Series 10</h3>
+                                    <div class="product-price" price="5399">HK$5399</div>
+                                    <div class="product-meta">
+                                        <span class="sales" sale_number="4200"><i class="fas fa-shopping-cart"></i> Monthly Sales 4200+</span>
+                                        <span class="rating" rate="4.6"><i class="fas fa-star"></i> 4.6</span>
+                                        <button onclick="cart.addToCart(5)">add to the cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card" id="6">
+                                <div class="product-image">
+                                    <img src="./images/airpods-pro-2.jpg" alt="Airpods pro 2">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Airpods pro 2</h3>
+                                    <div class="product-price" price="1849.00">HK$1849</div>
+                                    <div class="product-meta">
+                                        <span class="sales" sale_number="6500"><i class="fas fa-shopping-cart"></i> Monthly Sales 6500+</span>
+                                        <span class="rating" rate="4.8"><i class="fas fa-star"></i> 4.8</span>
+                                        <button onclick="cart.addToCart(6)">add to the cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card" id="7">
+                                <div class="product-image">
+                                    <img src="./images/airpods-4.jpg" alt="Airpods 4">
+                                </div>
+                                <div class="product-info" >
+                                    <h3 class="product-title">Airpods 4</h3>
+                                    <div class="product-price" price="1499.00">HK$1499</div>
+                                    <div class="product-meta">
+                                        <span class="sales" sale_number="4200"><i class="fas fa-shopping-cart"></i> Monthly Sales 4200+</span>
+                                        <span class="rating" rate="4.6"><i class="fas fa-star"></i> 4.6</span>
+                                        <button onclick="cart.addToCart(7)">add to the cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card" id="8">
+                                <div class="product-image">
+                                    <img src="./images/ultra.jpg" alt="Apple Watch Ultra 2">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">Apple Watch Ultra 2</h3>
+                                    <div class="product-price" price="2999.00">HK$2999</div>
+                                    <div class="product-meta">
+                                        <span class="sales" sale_number="4200"><i class="fas fa-shopping-cart"></i> Monthly Sales 4200+</span>
+                                        <span class="rating"  rate="4.6"><i class="fas fa-star"></i> 4.6</span>
+                                        <button onclick="cart.addToCart(8)">add to the cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="cart">
+                        <h2>shopping cart</h2>
+                        <ul id="cart-items"></ul>
+                        <p>total price: HK$<span id="total-price">0</span></p>
+                        <button onclick="cart.checkout()">checkout</button>
+                    </section> 
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+<script>
+    function sortProductCards_rates(gridID) {
+        const container = document.getElementById(gridID);
+        if (!container) {
+            console.error(`Can not find ${gridID} `);
+            return;
+        }
+    
+        const cards = Array.from(container.querySelectorAll(".product-card"));
+    
+        cards.sort((a, b) => {
+    
+            const ratingA = parseFloat(a.querySelector(".rating").getAttribute("rate"));
+    
+            const ratingB = parseFloat(b.querySelector(".rating").getAttribute("rate"));
+            return ratingB - ratingA;
+        });
+    
+    
+        container.innerHTML = "";
+    
+    
+        cards.forEach((cards) => {
+            container.appendChild(cards);
+        });
+    }
+    
+    function sortProductCards_sales_number(GridID) {
+        const container = document.getElementById(GridID);
+        if (!container) {
+            console.error(`Can not find ${gridID} `);
+            return;
+        }
+    
+    
+        const cards = Array.from(container.querySelectorAll(".product-card"));
+    
+    
+        cards.sort((a, b) => {
+    
+            const ratingA = parseInt(a.querySelector(".sales").getAttribute("sale_number"));
+    
+            const ratingB = parseInt(b.querySelector(".sales").getAttribute("sale_number"));
+            return ratingB - ratingA;
+        });
+    
+    
+        container.innerHTML = "";
+    
+    
+        cards.forEach((cards) => {
+            container.appendChild(cards);
+        });
+    }
+    
+    function sortProductCards_price(GridID) {
+        const container = document.getElementById(GridID);
+        if (!container) {
+            console.error(`Can not find ${gridID} `);
+            return;
+        }
+    
+    
+        const cards = Array.from(container.querySelectorAll(".product-card"));
+    
+    
+        cards.sort((a, b) => {
+    
+            const ratingA = parseFloat(a.querySelector(".product-price").getAttribute("price"));
+    
+            const ratingB = parseFloat(b.querySelector(".product-price").getAttribute("price"));
+            return ratingB - ratingA;
+        });
+    
+    
+        container.innerHTML = "";
+    
+    
+        cards.forEach((cards) => {
+            container.appendChild(cards);
+        });
+    }
+    
+    function sortProductCards_sum(gridID) {
+        const container = document.getElementById(gridID);
+        if (!container) {
+            console.error(`Can not find ${gridID} `);
+            return;
+        }
+    
+        const cards = Array.from(container.querySelectorAll(".product-card"));
+    
+        cards.sort((a, b) => {
+    
+            const ratingA = Number(parseFloat(a.querySelector(".rating").getAttribute("rate"))*parseInt(a.querySelector(".sales").getAttribute("sale_number"))/parseFloat(a.querySelector(".product-price").getAttribute("price")));
+    
+            const ratingB = Number(parseFloat(b.querySelector(".rating").getAttribute("rate"))*parseInt(b.querySelector(".sales").getAttribute("sale_number"))/parseFloat(b.querySelector(".product-price").getAttribute("price")));
+            return ratingB - ratingA;
+        });
+    
+    
+        container.innerHTML = "";
+    
+    
+        cards.forEach((cards) => {
+            container.appendChild(cards);
+        });
+    }
+    </script>
